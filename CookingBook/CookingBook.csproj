@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -64,6 +73,48 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppData\AppFrame.cs" />
+    <Compile Include="AppData\Authors.cs">
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\BookDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\BookDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\BookDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\Categories.cs">
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\CookingSetps.cs">
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\Ingridients.cs">
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\RecipeIngridients.cs">
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\Recipes.cs">
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\RecipeTags.cs">
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\Reviews.cs">
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\Tags1.cs">
+      <DependentUpon>BookDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -72,10 +123,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Recipe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\Authorize.xaml.cs">
       <DependentUpon>Authorize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Recipe.xaml.cs">
+      <DependentUpon>Recipe.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -94,6 +152,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="AppData\BookDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AppData\BookDB.edmx.diagram">
+      <DependentUpon>BookDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,19 +169,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image1.png" />
+    <Resource Include="1bd216cb23430a4055a8c973f4e361fd.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="34621c0a508defa808ab185d10ff94dd.jpg" />
+    <Resource Include="Untitled %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="59fa4637e245a5264992258199bd13da.png" />
+    <Resource Include="bico.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image2.png" />
+    <Content Include="AppData\BookDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BookDB.Context.cs</LastGenOutput>
+      <DependentUpon>BookDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="AppData\BookDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookDB.edmx</DependentUpon>
+      <LastGenOutput>BookDB.cs</LastGenOutput>
+    </Content>
+    <Resource Include="rec.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image3.png" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

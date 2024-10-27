@@ -12,12 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CookingBook.AppData;
+using CookingBook.Pages;
 
 namespace CookingBook
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -25,6 +24,12 @@ namespace CookingBook
             InitializeComponent();
             AppData.AppFrame.frMain = frMain;
             frMain.Navigate(new Pages.Authorize() );
+            AppConnect.modelOdb = new BookEntities();
+        }
+
+        private void frMain_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }

@@ -7,9 +7,14 @@ using System.Windows.Controls;
 
 namespace CookingBook.AppData
 {
+    class AppConnect
+    {
+        public static BookEntities modelOdb;
+    }
     internal class AppFrame
     {
         public static Frame frMain;
+        public static Frame 
         
     }
 }

@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BookModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Authors">
+    <Key>
+      <PropertyRef Name="AuthorID" />
+    </Key>
+    <Property Name="AuthorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AuthorName" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="Login" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CookingSetps">
+    <Key>
+      <PropertyRef Name="StepID" />
+    </Key>
+    <Property Name="StepID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RecipeID" Type="int" Nullable="false" />
+    <Property Name="StepNumber" Type="int" Nullable="false" />
+    <Property Name="StepDiscription" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ingridients">
+    <Key>
+      <PropertyRef Name="IngridientID" />
+    </Key>
+    <Property Name="IngridientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IngridientName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RecipeIngridients">
+    <Key>
+      <PropertyRef Name="RecipeIngridientID" />
+    </Key>
+    <Property Name="RecipeIngridientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RecipeID" Type="int" />
+    <Property Name="IngridientID" Type="int" />
+    <Property Name="Quantity" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Recipes">
+    <Key>
+      <PropertyRef Name="RecipeID" />
+    </Key>
+    <Property Name="RecipeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RecipeName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="AuthorID" Type="int" />
+    <Property Name="CookiengTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RecipeTags">
+    <Key>
+      <PropertyRef Name="RecipeTagID" />
+    </Key>
+    <Property Name="RecipeTagID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RecipeID" Type="int" />
+    <Property Name="TagID" Type="int" />
+  </EntityType>
+  <EntityType Name="Reviews">
+    <Key>
+      <PropertyRef Name="ReviewID" />
+    </Key>
+    <Property Name="ReviewID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RecipeID" Type="int" Nullable="false" />
+    <Property Name="ReviewText" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Rating" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tags1">
+    <Key>
+      <PropertyRef Name="TagID" />
+    </Key>
+    <Property Name="TagID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TagName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CookingSetps_Recipes">
+    <End Role="Recipes" Type="Self.Recipes" Multiplicity="1" />
+    <End Role="CookingSetps" Type="Self.CookingSetps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recipes">
+        <PropertyRef Name="RecipeID" />
+      </Principal>
+      <Dependent Role="CookingSetps">
+        <PropertyRef Name="RecipeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecipeIngridients_Ingridients">
+    <End Role="Ingridients" Type="Self.Ingridients" Multiplicity="0..1" />
+    <End Role="RecipeIngridients" Type="Self.RecipeIngridients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingridients">
+        <PropertyRef Name="IngridientID" />
+      </Principal>
+      <Dependent Role="RecipeIngridients">
+        <PropertyRef Name="IngridientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecipeIngridients_Recipes">
+    <End Role="Recipes" Type="Self.Recipes" Multiplicity="0..1" />
+    <End Role="RecipeIngridients" Type="Self.RecipeIngridients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recipes">
+        <PropertyRef Name="RecipeID" />
+      </Principal>
+      <Dependent Role="RecipeIngridients">
+        <PropertyRef Name="RecipeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recipes_Authors">
+    <End Role="Authors" Type="Self.Authors" Multiplicity="0..1" />
+    <End Role="Recipes" Type="Self.Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Authors">
+        <PropertyRef Name="AuthorID" />
+      </Principal>
+      <Dependent Role="Recipes">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recipes_Categories">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="Recipes" Type="Self.Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Recipes">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecipeTags_Recipes">
+    <End Role="Recipes" Type="Self.Recipes" Multiplicity="0..1" />
+    <End Role="RecipeTags" Type="Self.RecipeTags" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recipes">
+        <PropertyRef Name="RecipeID" />
+      </Principal>
+      <Dependent Role="RecipeTags">
+        <PropertyRef Name="RecipeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecipeTags_Tags1">
+    <End Role="Tags1" Type="Self.Tags1" Multiplicity="0..1" />
+    <End Role="RecipeTags" Type="Self.RecipeTags" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tags1">
+        <PropertyRef Name="TagID" />
+      </Principal>
+      <Dependent Role="RecipeTags">
+        <PropertyRef Name="TagID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reviews_Recipes">
+    <End Role="Recipes" Type="Self.Recipes" Multiplicity="1" />
+    <End Role="Reviews" Type="Self.Reviews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recipes">
+        <PropertyRef Name="RecipeID" />
+      </Principal>
+      <Dependent Role="Reviews">
+        <PropertyRef Name="RecipeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище BookModelContainer">
+    <EntitySet Name="Authors" EntityType="Self.Authors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CookingSetps" EntityType="Self.CookingSetps" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ingridients" EntityType="Self.Ingridients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecipeIngridients" EntityType="Self.RecipeIngridients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recipes" EntityType="Self.Recipes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecipeTags" EntityType="Self.RecipeTags" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reviews" EntityType="Self.Reviews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tags1" EntityType="Self.Tags1" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CookingSetps_Recipes" Association="Self.FK_CookingSetps_Recipes">
+      <End Role="Recipes" EntitySet="Recipes" />
+      <End Role="CookingSetps" EntitySet="CookingSetps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecipeIngridients_Ingridients" Association="Self.FK_RecipeIngridients_Ingridients">
+      <End Role="Ingridients" EntitySet="Ingridients" />
+      <End Role="RecipeIngridients" EntitySet="RecipeIngridients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecipeIngridients_Recipes" Association="Self.FK_RecipeIngridients_Recipes">
+      <End Role="Recipes" EntitySet="Recipes" />
+      <End Role="RecipeIngridients" EntitySet="RecipeIngridients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recipes_Authors" Association="Self.FK_Recipes_Authors">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="Recipes" EntitySet="Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recipes_Categories" Association="Self.FK_Recipes_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Recipes" EntitySet="Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecipeTags_Recipes" Association="Self.FK_RecipeTags_Recipes">
+      <End Role="Recipes" EntitySet="Recipes" />
+      <End Role="RecipeTags" EntitySet="RecipeTags" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecipeTags_Tags1" Association="Self.FK_RecipeTags_Tags1">
+      <End Role="Tags1" EntitySet="Tags1" />
+      <End Role="RecipeTags" EntitySet="RecipeTags" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reviews_Recipes" Association="Self.FK_Reviews_Recipes">
+      <End Role="Recipes" EntitySet="Recipes" />
+      <End Role="Reviews" EntitySet="Reviews" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

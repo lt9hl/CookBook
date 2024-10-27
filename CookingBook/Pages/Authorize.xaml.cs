@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CookingBook.AppData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+
 using System.Windows.Shapes;
 
 namespace CookingBook.Pages
@@ -27,7 +29,24 @@ namespace CookingBook.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                var userObj = AppConnect.modelOdb.Authors.FirstOrDefault(x => x.Login == TextLogin.Text && x.Password == TextPassword.Password);
+                    if( userObj == null)
+                    {
+                    MessageBox.Show("Пользователь не найден!","Ошибка авторизации", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    else
+                    {
+                    MessageBox.Show($"Здравствуйте, {userObj.AuthorName}", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                   
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка" + ex.Message.ToString() + "Критическая работа приложения!",
+                    "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
