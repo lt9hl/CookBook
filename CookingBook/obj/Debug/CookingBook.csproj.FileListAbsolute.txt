@@ -39,3 +39,31 @@ D:\работы для колледжа\Прог модули\repos\CookingBook\
 D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\bin\Debug\EntityFramework.SqlServer.xml
 D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\bin\Debug\ru\EntityFramework.resources.dll
 D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\obj\Debug\CookingBook.csproj.CopyComplete
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook.csproj.AssemblyReference.cache
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\MainWindow.g.cs
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\Pages\Authorize.g.cs
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\Pages\Recipe.g.cs
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\App.g.cs
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook_Content.g.cs
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook_MarkupCompile.cache
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook_MarkupCompile.lref
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook.exe
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook.pdb
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\bin\Debug\CookingBook.exe.config
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\bin\Debug\CookingBook.exe
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\bin\Debug\CookingBook.pdb
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\bin\Debug\EntityFramework.dll
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\bin\Debug\EntityFramework.xml
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\MainWindow.baml
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\Pages\Authorize.baml
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\Pages\Recipe.baml
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook.g.resources
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook.Properties.Resources.resources
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook.csproj.GenerateResource.cache
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook.csproj.CoreCompileInputs.cache
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingB.B7613AC3.Up2Date
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\Pages\Registration.g.cs
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\Pages\Registration.baml

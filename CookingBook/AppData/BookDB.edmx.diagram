@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="BookModel.RecipeIngridients" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BookModel.Recipes" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BookModel.RecipeTags" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BookModel.Reviews" Width="1.5" PointX="3.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BookModel.Reviews" Width="1.5" PointX="2.25" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="BookModel.Tags1" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
         <AssociationConnector Association="BookModel.FK_Recipes_Authors" ManuallyRouted="false" />
         <AssociationConnector Association="BookModel.FK_Recipes_Categories" ManuallyRouted="false" />

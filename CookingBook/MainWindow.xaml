@@ -14,7 +14,7 @@
         <StackPanel x:Name="MainSt" Margin="-44,1,-46,-44" Grid.ColumnSpan="2">
             <Image x:Name="mainWin" Height="492" Source="/Untitled (2).png" Stretch="Fill" Width="802"/>
         </StackPanel>
-        <Frame x:Name="frMain" Margin="0,162,0,0" Grid.ColumnSpan="2" Foreground="#FFF3E7D2" Navigated="frMain_Navigated"/>
+        <Frame x:Name="frMain" Margin="0,162,0,0" Grid.ColumnSpan="2" Foreground="#FFF3E7D2" NavigationUIVisibility="Hidden"/>
 
     </Grid>
 </Window>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\obj\Debug\
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\
 CookingBook
 none
 false
 DEBUG;TRACE
-D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\App.xaml
-2-1084668410
+C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\App.xaml
+41891665033
 21049779867
-191502870634
-181723235925
-MainWindow.xaml;Pages\Authorize.xaml;
+21-663385093
+18635809151
+MainWindow.xaml;Pages\Authorize.xaml;Pages\Recipe.xaml;Pages\Registration.xaml;
 
 False
 

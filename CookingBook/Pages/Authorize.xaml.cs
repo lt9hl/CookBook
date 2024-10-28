@@ -53,5 +53,10 @@ namespace CookingBook.Pages
         {
 
         }
+
+        private void SungUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.Registration());
+        }
     }
 }

@@ -14,7 +14,6 @@ namespace CookingBook.AppData
     internal class AppFrame
     {
         public static Frame frMain;
-        public static Frame 
         
     }
 }

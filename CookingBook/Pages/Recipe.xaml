@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel Margin="1,1,-1,-1">
-            <Image Height="498" Source="/rec.png" Width="802" Stretch="Fill"/>
+            <Image Height="450" Source="/rec.png" Width="802" Stretch="Fill"/>
         </StackPanel>
 
     </Grid>
