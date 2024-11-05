@@ -24,6 +24,9 @@ namespace CookingBook.AppData
         public string AuthorName { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public Nullable<System.DateTime> Birthday { get; set; }
+        public Nullable<double> Expirience { get; set; }
+        public string PhNum { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Recipes> Recipes { get; set; }

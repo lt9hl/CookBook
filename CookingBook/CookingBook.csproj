@@ -185,20 +185,22 @@
     <Resource Include="bico.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="rec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="AppData\BookDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BookDB.Context.cs</LastGenOutput>
       <DependentUpon>BookDB.edmx</DependentUpon>
+      <LastGenOutput>BookDB.Context.cs</LastGenOutput>
     </Content>
     <Content Include="AppData\BookDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BookDB.edmx</DependentUpon>
       <LastGenOutput>BookDB.cs</LastGenOutput>
     </Content>
-    <Resource Include="rec.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

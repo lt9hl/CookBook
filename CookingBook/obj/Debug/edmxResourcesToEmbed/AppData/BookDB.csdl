@@ -5,9 +5,12 @@
       <PropertyRef Name="AuthorID" />
     </Key>
     <Property Name="AuthorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="AuthorName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Login" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="AuthorName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Expirience" Type="Double" />
+    <Property Name="PhNum" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Recipes" Relationship="Self.FK_Recipes_Authors" FromRole="Authors" ToRole="Recipes" />
   </EntityType>
   <EntityType Name="Categories">
@@ -189,7 +192,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BookEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="BookEntitiesNw" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Authors" EntityType="Self.Authors" />
     <EntitySet Name="Categories" EntityType="Self.Categories" />
     <EntitySet Name="CookingSetps" EntityType="Self.CookingSetps" />

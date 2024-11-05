@@ -9,12 +9,13 @@
       Title="Authorize">
 
     <Grid Height="469">
-        <TextBox x:Name="TextLogin" HorizontalAlignment="Center" Margin="0,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="20" TextChanged="TextBox_TextChanged" Background="#FFF3E7D2" BorderBrush="#FFE0D2BB" SelectionBrush="#FFEBC26F"/>
-        <PasswordBox x:Name="TextPassword" HorizontalAlignment="Center" Margin="0,156,0,0" VerticalAlignment="Top" Width="224" Height="20" Background="#FFF3E7D2" BorderBrush="#FFE0D2BB" SelectionBrush="#FFEBC26F"/>
-        <TextBlock x:Name="Password" HorizontalAlignment="Left" Margin="288,128,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Foreground="Black" FontSize="20" FontFamily="Times New Roman"/>
-        <TextBlock x:Name="Login" HorizontalAlignment="Left" Margin="288,70,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Foreground="Black" FontSize="20" FontFamily="Times New Roman"/>
-        <Button x:Name="ButtonAuth" Content="Sing in" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Click="Button_Click" Foreground="Black" Height="30" Margin="288,204,0,0" FontFamily="Times New Roman" FontSize="20" Background="#FFF3E7D2" BorderBrush="#FFDCCCB2"/>
-        <Button x:Name="SungUpButton" Content="Sing up" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Foreground="Black" Height="30" Margin="402,204,0,0" FontFamily="Times New Roman" FontSize="20" Background="#FFF3E7D2" BorderBrush="#FFDCCCB2" Click="SungUpButton_Click"/>
+        <TextBox x:Name="TextLogin" HorizontalAlignment="Left" Margin="226,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="20" TextChanged="TextBox_TextChanged" Background="#FFF3E7D2" BorderBrush="#FFE0D2BB" SelectionBrush="#FFEBC26F"/>
+        <PasswordBox x:Name="TextPassword" HorizontalAlignment="Left" Margin="226,146,0,0" VerticalAlignment="Top" Width="223" Height="20" Background="#FFF3E7D2" BorderBrush="#FFE0D2BB" SelectionBrush="#FFEBC26F"/>
+        <TextBlock x:Name="Password" HorizontalAlignment="Left" Margin="226,123,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Foreground="Black" FontSize="20" FontFamily="Times New Roman"/>
+        <TextBlock x:Name="Login" HorizontalAlignment="Left" Margin="226,73,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Foreground="Black" FontSize="20" FontFamily="Times New Roman"/>
+        <Button x:Name="ButtonAuth" Content="Sing in" HorizontalAlignment="Left" VerticalAlignment="Top" Width="110" Click="Button_Click" Foreground="Black" Height="30"  FontFamily="Times New Roman" FontSize="20" Background="#FFF3E7D2" BorderBrush="#FFDCCCB2" Margin="469,96,0,0"/>
+        <Button x:Name="SungUpButton" Content="Sing up" HorizontalAlignment="Left" VerticalAlignment="Top" Width="224" Foreground="Black" Height="30"  FontFamily="Times New Roman" FontSize="20" Background="#FFF3E7D2" BorderBrush="#FFDCCCB2" Click="SungUpButton_Click" Margin="226,196,0,0"/>
+        <TextBlock x:Name="TextOrSingUp" HorizontalAlignment="Left" Margin="226,178,0,0" TextWrapping="Wrap" Text="A new user? Register!" VerticalAlignment="Top" Foreground="#FF8C6F39" FontSize="16" FontFamily="Times New Roman" Width="236"/>
 
     </Grid>
 </Page>

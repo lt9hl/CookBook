@@ -24,7 +24,7 @@ namespace CookingBook
             InitializeComponent();
             AppData.AppFrame.frMain = frMain;
             frMain.Navigate(new Pages.Authorize() );
-            AppConnect.modelOdb = new BookEntities();
+            AppConnect.modelOdb = new BookEntitiesNw();
         }
 
         private void frMain_Navigated(object sender, NavigationEventArgs e)

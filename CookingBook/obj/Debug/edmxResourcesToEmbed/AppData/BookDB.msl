@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище BookModelContainer" CdmEntityContainer="BookEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BookModelContainer" CdmEntityContainer="BookEntitiesNw">
     <EntitySetMapping Name="Authors">
       <EntityTypeMapping TypeName="BookModel.Authors">
         <MappingFragment StoreEntitySet="Authors">
@@ -8,6 +8,9 @@
           <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
           <ScalarProperty Name="Login" ColumnName="Login" />
           <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Expirience" ColumnName="Expirience" />
+          <ScalarProperty Name="PhNum" ColumnName="PhNum" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -13,10 +13,10 @@ namespace CookingBook.AppData
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BookEntities : DbContext
+    public partial class BookEntitiesNw : DbContext
     {
-        public BookEntities()
-            : base("name=BookEntities")
+        public BookEntitiesNw()
+            : base("name=BookEntitiesNw")
         {
         }
     

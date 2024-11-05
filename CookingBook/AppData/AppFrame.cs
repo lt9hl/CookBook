@@ -9,7 +9,7 @@ namespace CookingBook.AppData
 {
     class AppConnect
     {
-        public static BookEntities modelOdb;
+        public static BookEntitiesNw modelOdb;
     }
     internal class AppFrame
     {

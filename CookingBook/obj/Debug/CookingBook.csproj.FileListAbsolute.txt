@@ -67,3 +67,7 @@ C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingBook.cs
 C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\CookingB.B7613AC3.Up2Date
 C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\Pages\Registration.g.cs
 C:\Users\10231372\source\repos\CookBook\.vs\CookingBook\obj\Debug\Pages\Registration.baml
+D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\obj\Debug\Pages\Recipe.g.cs
+D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\obj\Debug\Pages\Registration.g.cs
+D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\obj\Debug\Pages\Recipe.baml
+D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\obj\Debug\Pages\Registration.baml
