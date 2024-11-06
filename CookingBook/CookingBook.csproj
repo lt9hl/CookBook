@@ -123,7 +123,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Recipe.xaml">
+    <Page Include="Pages\PageRecipe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,8 +136,8 @@
     <Compile Include="Pages\Authorize.xaml.cs">
       <DependentUpon>Authorize.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Recipe.xaml.cs">
-      <DependentUpon>Recipe.xaml</DependentUpon>
+    <Compile Include="Pages\PageRecipe.xaml.cs">
+      <DependentUpon>PageRecipe.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
@@ -201,6 +201,8 @@
       <DependentUpon>BookDB.edmx</DependentUpon>
       <LastGenOutput>BookDB.cs</LastGenOutput>
     </Content>
+    <Resource Include="AppData\no.png" />
+    <Resource Include="AppData\ph1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

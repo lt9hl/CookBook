@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\работы для колледжа\Прог модули\repos\CookingBook\CookingBook\App.xaml
-41891665033
+4548903342
 21049779867
-221549493585
+22666764148
 181723235925
-MainWindow.xaml;Pages\Authorize.xaml;Pages\Recipe.xaml;Pages\Registration.xaml;
+MainWindow.xaml;Pages\Authorize.xaml;Pages\PageRecipe.xaml;Pages\Registration.xaml;
 
-False
+True
 

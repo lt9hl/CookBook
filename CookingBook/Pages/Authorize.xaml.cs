@@ -36,11 +36,12 @@ namespace CookingBook.Pages
                     {
                     MessageBox.Show("Пользователь не найден!","Ошибка авторизации", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
-                    else
-                    {
+                else
+                {
                     MessageBox.Show($"Здравствуйте, {userObj.AuthorName}", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                   
+                    NavigationService.Navigate(new Pages.PageRecipe());
+                }
+
             }
             catch (Exception ex)
             {

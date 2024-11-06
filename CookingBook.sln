@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookingBook", "CookingBook\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reg", "Reg", "{54AE8012-50A2-475A-9205-53842AB00EAB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{ECAE7357-6113-4A3E-821D-562481728637}"
+	ProjectSection(SolutionItems) = preProject
+		CookingBook\AppData\no.png = CookingBook\AppData\no.png
+		CookingBook\AppData\ph1.jpg = CookingBook\AppData\ph1.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

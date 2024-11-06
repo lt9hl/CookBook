@@ -64,9 +64,8 @@ namespace CookingBook.Pages
                     Login = LoginBox.Text,
                     AuthorName = UserBox.Text,
                     Password = RegPassBox.Password,
-                   
-
                     
+                    PhNum = NumberBox.Text,
                 };
                 AppConnect.modelOdb.Authors.Add(userObj);
                 AppConnect.modelOdb.SaveChanges();

@@ -30,7 +30,15 @@ namespace CookingBook.AppData
         public Nullable<int> AuthorID { get; set; }
         public string CookiengTime { get; set; }
         public string Image { get; set; }
-    
+        public string CurrentPhoto
+        {
+            get
+            {
+                if (String.IsNullOrEmpty(Image) || String.IsNullOrWhiteSpace(Image))
+                    return @"\Images\no.png";
+                else return @"\Image\" + Image;
+            }
+        }
         public virtual Authors Authors { get; set; }
         public virtual Categories Categories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
